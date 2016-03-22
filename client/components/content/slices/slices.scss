@@ -1,0 +1,12 @@
+@import 'variables';
+
+// Mobile
+@media screen and (max-width: $mobile-viewport) {
+  @import './style-modules/mobile';
+}
+
+
+// Desktop
+@media screen and (min-width: $mobile-viewport) {
+  @import './style-modules/desktop';
+}

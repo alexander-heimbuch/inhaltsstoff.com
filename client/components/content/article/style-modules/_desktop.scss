@@ -1,0 +1,72 @@
+// 
+// Single Article - Desktop
+
+.single-article {
+	padding: $padding * 2 0;
+
+	height: 100vh;
+
+	overflow-y: auto;
+
+	.row {
+		margin-bottom: $margin * 3;
+	}
+
+	.meta {
+		margin: ($margin / 4) 0 0 ($margin / 4); 
+	}
+
+	.article-image {
+		position: fixed;
+
+		z-index: -1;
+
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+
+		background-size: cover;
+
+		&:before {
+			position: absolute;
+			content: '';
+
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+
+			background-color: $color-background;
+			opacity: 0.85;
+		}
+	}
+
+	.article-content, .article-intro, .article-comments  {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.article-intro {
+		margin-bottom: $margin * 2;
+
+		.intro-headline {
+			margin-bottom: 0;
+			line-height: $padding * 2;
+		}
+
+		.intro-bar {
+			background-color: transparent !important;
+		}
+	}
+
+	.article-content {
+		.article-image {
+			@include visually-hidden;
+		}
+
+		 @import './content';
+
+		 margin-bottom: $margin * 3;
+	}
+}

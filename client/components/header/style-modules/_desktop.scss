@@ -1,0 +1,61 @@
+//
+// Header Startpage
+
+$small-header-width: 90px;
+
+.header {
+  position: relative;
+  width: 35%;
+  min-width: $desktop-viewport * 0.35;
+  min-height: 100vh;
+
+  @include flex-center;
+
+  &.small-header:not(.navigation-open) {
+    min-width: $small-header-width;
+    width: $small-header-width;
+  }
+
+  &.navigation-open {    
+      .site-headline {
+          opacity: 0;
+
+      }
+  }
+    
+  .icon-menu {
+    left: $margin * 2;
+  }
+}
+
+.site-headline {
+    flex-direction: column !important;
+    opacity: 1;
+
+    .site-title {
+        @include headline-font;
+        font-size: 2.8em;
+        line-height: 1.2em;
+        margin-bottom: 0;
+    }
+
+    .site-claim {
+        @include headline-font; 
+        font-size: 1.2em;
+    }
+
+    a {
+        border-bottom: 0;
+    }
+}
+
+.small-header:not(.navigation-open) {
+  .site-headline {
+    margin-left: -10px;
+    transform: translate3d(0, 50%, 0) rotate(-90deg);
+  }
+
+  .site-claim {
+    @include visually-hidden;
+  }
+}

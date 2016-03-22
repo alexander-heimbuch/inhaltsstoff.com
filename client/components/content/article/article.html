@@ -1,0 +1,20 @@
+<div class="preloader" [loaded]="loaded"></div>
+<article class="container single-article" *ngIf="article">
+	<div class="article-image" [ngStyle]="{'background-image': 'url(' + article.image + ')'}"></div>
+
+	<div class="article-intro row">
+		<div class="columns intro-bar" category-color [categories]="article.categories">
+			<h2 class="headline-medium intro-headline headline-large">{{ article.title }}</h2>
+			<div class="meta">
+				<author class="author">{{ article.author }}</author>
+				am <time class="time">{{ article.publish | amDateFormat:'DD.MM.YYYY' }}</time>
+				in <span class="category-list" [categories]="article.categories"></span>
+			</div>
+		</div>
+	</div>
+	<div class="row article-content">
+		<div class="article-image" [ngStyle]="{'background-image': 'url(' + article.image + ')'}"></div>
+		<div class="columns content" [innerHTML]="article.content"></div>
+	</div>
+</article>
+<div class="error" [message]="errorMessage" *ngIf="!article"></div>

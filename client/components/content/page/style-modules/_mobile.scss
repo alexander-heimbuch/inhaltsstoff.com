@@ -1,0 +1,12 @@
+// 
+// Page - Mobile
+
+.single-page {
+	.intro-headline {
+		text-align: center;
+	}
+
+	.page-content {
+		 @import './content';
+	}
+}

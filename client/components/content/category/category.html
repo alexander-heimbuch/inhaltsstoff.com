@@ -1,0 +1,3 @@
+<div class="content slices" [articles]="articles"  *ngIf="articles.length > 0"></div>
+<div class="error" [message]="errorMessage" *ngIf="articles.length === 0"></div>
+<div class="preloader" [loaded]="loaded"></div>

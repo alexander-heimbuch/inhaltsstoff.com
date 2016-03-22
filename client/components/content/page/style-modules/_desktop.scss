@@ -1,0 +1,40 @@
+// 
+// Page - Desktop 
+
+@import 'variables';
+@import 'text';
+
+.single-page {
+	padding: $padding * 2 0;
+
+	height: 100vh;
+
+	overflow-y: auto;
+
+	.row {
+		margin-bottom: $margin * 3;
+	}
+
+	.page-content, .page-intro {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.page-intro {
+		margin-bottom: $margin * 2;
+
+		.intro-headline {
+			margin-bottom: 0;
+			line-height: $padding * 2;
+		}
+
+		.intro-bar {
+			background-color: transparent !important;
+		}
+	}
+
+	.page-content {
+		 @import './content';
+
+	}
+}

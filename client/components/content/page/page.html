@@ -1,0 +1,12 @@
+<div class="preloader" [loaded]="loaded"></div>
+<article class="container single-page" *ngIf="page">>
+	<div class="page-intro row">
+		<div class="columns intro-bar">
+			<h2 class="headline-medium intro-headline headline-large">{{ page.title }}</h2>
+		</div>
+	</div>
+	<div class="row page-content">
+		<div class="columns content" [innerHTML]="page.content"></div>
+	</div>
+</article>
+<div class="error" [message]="errorMessage" *ngIf="!page"></div>

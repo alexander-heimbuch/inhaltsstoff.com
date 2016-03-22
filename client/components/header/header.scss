@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'mixins';
+@import 'text';
+@import 'icons';
+
+// Mobile
+@media screen and (max-width: $mobile-viewport) {
+  @import './style-modules/mobile';
+  @import './style-modules/animations-mobile';
+}
+
+// Desktop
+@media screen and (min-width: $mobile-viewport) {
+  @import './style-modules/desktop';
+  @import './style-modules/animations-desktop';
+}

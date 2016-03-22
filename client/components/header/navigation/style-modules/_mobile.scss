@@ -1,0 +1,74 @@
+// 
+// Mobile Navigartion
+
+.navigation-toggle {
+  position: absolute;
+  width: $menu-icon-size / 1.2;
+  height: $menu-icon-size / 1.2;
+
+  right: $margin;
+  top: $padding * 2;
+  background-color: $color-text;
+}
+
+.navigation {
+  height: 0;
+  overflow: hidden;
+
+  font-size: 1.2em;
+
+  .navigation-list {
+    text-align: right;
+    padding: $padding * 2 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    padding: 0;
+    margin-bottom: $margin / 4;
+    padding-right: $padding;
+  }
+
+  .section {
+    display: block;
+    margin-bottom: $margin;
+
+    h3 {
+      font-weight: 500;
+    }
+
+    ul {
+      margin-top: $margin / 2;
+    }
+  }
+
+  &.open {
+    height: calc(100vh - 80px);
+  }
+}
+
+.navigation-active {
+  overflow: hidden;
+
+  .header {
+    height: 100vh;
+    overflow-y: scroll;
+
+    .icon-menu {
+      background-color: $color-text;
+    }
+
+    .site-headline {
+      margin-bottom: $margin * 2;
+    }
+
+    .navigation {
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import '_variables';
+
+//
+// Categories
+// type 1
+.content-action {
+  background-color: opacify($color-category-one, 0.95);
+}
+
+.content-fiction {
+  background-color: opacify($color-category-one, 0.1);
+}
+
+.content-krieg {
+  background-color: opacify($color-category-one, 0.2);
+}
+
+.content-western {
+  background-color: opacify($color-category-one, 0.3);
+}
+
+.content-scifi {
+  background-color: opacify($color-category-one, 0.4);
+}
+
+// type 2
+.content-animation {
+  background-color: opacify($color-category-two, 0.95);
+}
+
+.content-comedy {
+  background-color: opacify($color-category-two, 0.1);
+}
+
+.content-family {
+  background-color: opacify($color-category-two, 0.2);
+}
+
+.content-fantasy {
+  background-color: opacify($color-category-two, 0.3);
+}
+
+.content-romance {
+  background-color: opacify($color-category-two, 0.4);
+}
+
+// type 3
+.content-geschichte {
+  background-color: $color-category-three;
+}
+
+.content-biografie {
+  background-color: opacify($color-category-three, 0.1);
+}
+
+.content-dokumentation {
+  background-color: opacify($color-category-three, 0.2);
+}
+
+.content-musik {
+  background-color: opacify($color-category-three, 0.3);
+}
+
+.content-sport {
+  background-color: opacify($color-category-three, 0.4);
+}
+
+// type 4
+.content-drama {
+  background-color: opacify($color-category-four, 0.95);
+}
+
+.content-horror {
+  background-color: opacify($color-category-four, 0.95);
+}
+
+.content-mystery {
+  background-color: opacify($color-category-four, 0.95);
+}
+
+.content-krimi {
+  background-color: opacify($color-category-four, 0.95);
+}
+
+.content-thriller {
+  background-color: opacify($color-category-four, 0.95);
+}

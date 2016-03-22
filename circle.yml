@@ -1,0 +1,9 @@
+machine:
+  node:
+    version: 6.2.2
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - surge --project ./build --domain inhaltsstoff.com
