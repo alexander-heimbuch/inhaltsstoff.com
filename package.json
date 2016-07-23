@@ -7,7 +7,7 @@
     "prod": "npm run server && npm run statics-server && npm run prod-statics-client && NODE_ENV=prod webpack --config client/webpack.config.babel.js",
     "server": "rm -rf build/data && babel-node server/index.js --presets es2015",
     "dev-statics-client": "mkdir -p build/ && rm -vf build/*.{svg,js,png,html} && cp client/index.dev.html build/index.html && cp client/favicon.png build/",
-    "prod-statics-client": "mkdir -p build/ && rm -vf build/*.{svg,js,gz,png,html} && cp client/index.prod.html build/index.html && cp client/favicon.png build/",
+    "prod-statics-client": "mkdir -p build/ && rm -vf build/*.{svg,js,gz,png,html} && cp client/index.prod.html build/index.html && cp client/robots.txt build/ && cp client/favicon.png build/",
     "statics-server": "mkdir -p build/ && rm -rvf build/statics && cp -R content/statics build/statics",
     "test": "npm run prod"
   },
