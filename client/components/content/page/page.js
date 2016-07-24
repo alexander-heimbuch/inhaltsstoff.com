@@ -18,7 +18,7 @@ import './page.scss';
 @Component({
 	selector: 'main',
     template: html,
-    directives: [PreloaderDirective],
+    directives: [PreloaderDirective, ErrorDirective],
     providers: [Title]
 })
 export class PageComponent {
@@ -38,7 +38,7 @@ export class PageComponent {
 		this.content.pages('name', params.name)
 			.subscribe(page => {
 				this.page = page;
-                this.title.set(`${this.state.data.site.title} - ${this.page.title}`); 
+                this.title.setTitle(`${this.state.data.site.title} - ${this.page.title}`); 
 			}, undefined, () => this.loaded = true);
     }
 
