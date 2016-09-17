@@ -12,7 +12,7 @@ const babelPlugins = [
 ];
 
 const isProduction = process.env.NODE_ENV === 'prod';
-      
+
 const plugins = isProduction ?
     [
       new webpack.DefinePlugin({ENVIRONMENT: JSON.stringify('production')}),
@@ -49,7 +49,7 @@ export default {
         }
       }, {
         test: /\.scss$/,
-        loaders: [ 'style', 'css', 'autoprefixer-loader?browsers=last 2 versions', 'sass']
+        loaders: ['style', 'css', 'autoprefixer-loader?browsers=last 2 versions', 'sass']
       }, {
         test: /\.(woff|woff2|eot|ttf|svg)$/,
         loader: 'url-loader?limit=100000'

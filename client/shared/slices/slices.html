@@ -1,0 +1,13 @@
+<article class="slice container" *ngFor="let article of articles;" [style.width.%]="100 / articles.length">
+    <div class="preview row" [ngStyle]="{'background-image': 'url(' + article.image + ')'}">
+        <div class="columns preview-bar" category-color [categories]="article.categories">
+            <a [routerLink]="['/article', article.name]"><h2 class="headline-medium preview-headline">{{ article.title }}</h2></a>
+
+            <div class="category-list" [categories]="article.categories"></div>
+            <div class="meta">
+                <span class="author">{{ article.author }}</span> am
+                <span class="time">{{ article.publish | amDateFormat:'DD.MM.YYYY' }}</span>
+            </div>
+        </div>
+    </div>
+</article>
