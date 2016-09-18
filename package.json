@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npm run server && npm run statics-server && npm run statics && webpack-dev-server --config client/webpack.config.babel.js --content-base build/ --hot --inline",
-    "prod": "npm run server && npm run statics-server && npm run statics && NODE_ENV=prod webpack --config client/webpack.config.babel.js",
-    "server": "rm -rf build/data && babel-node server/index.js --presets es2015",
+    "dev": "npm run generator && npm run statics-generator && npm run statics && webpack-dev-generator --config client/webpack.config.babel.js --content-base build/ --hot --inline",
+    "prod": "npm run generator && npm run statics-generator && npm run statics && NODE_ENV=prod webpack --config client/webpack.config.babel.js",
+    "generator": "rm -rf build/data && babel-node generator/index.js --presets es2015",
     "statics": "mkdir -p build/ && rm -vf build/*.{svg,js,gz,png,html} && cp client/index.html build/index.html && cp client/robots.txt build/ && cp client/favicon.png build/",
-    "statics-server": "mkdir -p build/ && rm -rvf build/statics && cp -R content/statics build/statics",
+    "statics-generator": "mkdir -p build/ && rm -rvf build/statics && cp -R content/statics build/statics",
     "test": "npm run prod"
   },
   "license": "ISC",

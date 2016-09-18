@@ -1,7 +1,7 @@
 /* eslint-env node */
 
 var fs = require('fs-extra'),
-	path = require('path');
+	  path = require('path');
 
 function parseCategories(categories) {
 	if (categories === undefined) {

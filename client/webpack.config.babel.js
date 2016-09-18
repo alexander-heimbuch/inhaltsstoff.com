@@ -2,7 +2,7 @@ import webpack from 'webpack';
 import path from 'path';
 
 // Webpack Plugins
-import livereloadPlugin from 'webpack-livereload-plugin';
+import LivereloadPlugin from 'webpack-livereload-plugin';
 
 const babelPlugins = [
   'angular2-annotations',
@@ -13,50 +13,60 @@ const babelPlugins = [
 
 const isProduction = process.env.NODE_ENV === 'prod';
 
-const plugins = isProduction ?
-    [
-      new webpack.DefinePlugin({ENVIRONMENT: JSON.stringify('production')}),
-      new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.UglifyJsPlugin({
-          beautify: false,
-          mangle: { screw_ie8 : true },
-          compress : { screw_ie8 : true },
-          comments: false
-      })
-    ] :
-    [new webpack.DefinePlugin({ENVIRONMENT: JSON.stringify('development')}), new livereloadPlugin({appendScriptTag: true})]
+const devPlugins = [
+  new webpack.DefinePlugin({ ENVIRONMENT: JSON.stringify('development') }),
+  new LivereloadPlugin({ appendScriptTag: true }),
+  new webpack.optimize.CommonsChunkPlugin(
+    'vendor', 'vendor.js'
+  )
+];
+
+const prodPlugins = [
+  new webpack.DefinePlugin({ ENVIRONMENT: JSON.stringify('production') }),
+  new webpack.optimize.DedupePlugin(),
+  new webpack.optimize.CommonsChunkPlugin(
+    'vendor', 'vendor.js'
+  ),
+  new webpack.optimize.UglifyJsPlugin({
+    beautify: false,
+    mangle: { screw_ie8: true },
+    compress: { screw_ie8: true },
+    comments: false
+  })
+];
 
 export default {
   entry: {
-    boot: './client/root.js'
+    boot: './client/root.js',
+    vendor: './client/vendor.js'
   },
 
-  debug: isProduction ? false: true,
+  debug: isProduction,
 
   output: {
     path: './build',
-    filename: 'app.bundle.js'
+    filename: '[name].js'
   },
 
   module: {
     loaders: [{
-        test: /\.js$/,
-        loader: 'babel',
-        exclude: /(node_modules)/,
-        query: {
-          presets: ['es2015'],
-          plugins: babelPlugins
-        }
-      }, {
-        test: /\.scss$/,
-        loaders: ['style', 'css', 'autoprefixer-loader?browsers=last 2 versions', 'sass']
-      }, {
-        test: /\.(woff|woff2|eot|ttf|svg)$/,
-        loader: 'url-loader?limit=100000'
-      }, {
-        test: /\.html$/,
-        loader: 'html'
-      }]
+      test: /\.js$/,
+      loader: 'babel',
+      exclude: /(node_modules)/,
+      query: {
+        presets: ['es2015'],
+        plugins: babelPlugins
+      }
+    }, {
+      test: /\.scss$/,
+      loaders: ['style', 'css', 'autoprefixer-loader?browsers=last 2 versions', 'sass']
+    }, {
+      test: /\.(woff|woff2|eot|ttf|svg)$/,
+      loader: 'url-loader?limit=100000'
+    }, {
+      test: /\.html$/,
+      loader: 'html'
+    }]
   },
 
   htmlLoader: {
@@ -80,7 +90,7 @@ export default {
     extensions: ['', '.js', '.json']
   },
 
-  plugins: plugins,
+  plugins: isProduction ? prodPlugins : devPlugins,
 
   devtool: isProduction ? '' : 'eval'
 };
