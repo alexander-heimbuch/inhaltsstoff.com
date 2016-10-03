@@ -1,8 +1,10 @@
 import webpack from 'webpack';
 import path from 'path';
+import Dashboard from 'webpack-dashboard';
 
 // Webpack Plugins
 import LivereloadPlugin from 'webpack-livereload-plugin';
+import DashboardPlugin from 'webpack-dashboard/plugin';
 
 const babelPlugins = [
   'angular2-annotations',
@@ -13,7 +15,10 @@ const babelPlugins = [
 
 const isProduction = process.env.NODE_ENV === 'prod';
 
+const dashboard = new Dashboard();
+
 const devPlugins = [
+  new DashboardPlugin(dashboard.setData),
   new webpack.DefinePlugin({ ENVIRONMENT: JSON.stringify('development') }),
   new LivereloadPlugin({ appendScriptTag: true }),
   new webpack.optimize.CommonsChunkPlugin(

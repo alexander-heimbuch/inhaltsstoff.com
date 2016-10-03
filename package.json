@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "npm run generator && npm run statics-generator && npm run statics && webpack-dev-generator --config client/webpack.config.babel.js --content-base build/ --hot --inline",
+    "dev": "npm run generator && npm run statics-generator && npm run statics && webpack-dev-server --config client/webpack.config.babel.js --content-base build/ --quiet --hot --inline",
     "prod": "npm run generator && npm run statics-generator && npm run statics && NODE_ENV=prod webpack --config client/webpack.config.babel.js",
     "generator": "rm -rf build/data && babel-node generator/index.js --presets es2015",
     "statics": "mkdir -p build/ && rm -vf build/*.{svg,js,gz,png,html} && cp client/index.html build/index.html && cp client/robots.txt build/ && cp client/favicon.png build/",
@@ -62,6 +62,7 @@
     "surge": "0.18.0",
     "url-loader": "0.5.7",
     "webpack": "1.13.0",
+    "webpack-dashboard": "^0.2.0",
     "webpack-dev-server": "1.14.1",
     "webpack-livereload-plugin": "0.8.1"
   }
