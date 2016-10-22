@@ -1,3 +1,5 @@
+/* eslint-env node*/
+
 import webpack from 'webpack';
 import path from 'path';
 import Dashboard from 'webpack-dashboard';
@@ -15,30 +17,33 @@ const babelPlugins = [
 
 const isProduction = process.env.NODE_ENV === 'prod';
 
-const dashboard = new Dashboard();
+let plugins = [];
 
-const devPlugins = [
-  new DashboardPlugin(dashboard.setData),
-  new webpack.DefinePlugin({ ENVIRONMENT: JSON.stringify('development') }),
-  new LivereloadPlugin({ appendScriptTag: true }),
-  new webpack.optimize.CommonsChunkPlugin(
-    'vendor', 'vendor.js'
-  )
-];
-
-const prodPlugins = [
-  new webpack.DefinePlugin({ ENVIRONMENT: JSON.stringify('production') }),
-  new webpack.optimize.DedupePlugin(),
-  new webpack.optimize.CommonsChunkPlugin(
-    'vendor', 'vendor.js'
-  ),
-  new webpack.optimize.UglifyJsPlugin({
-    beautify: false,
-    mangle: { screw_ie8: true },
-    compress: { screw_ie8: true },
-    comments: false
-  })
-];
+if (isProduction) {
+  plugins = [
+    new webpack.DefinePlugin({ ENVIRONMENT: JSON.stringify('production') }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.CommonsChunkPlugin(
+      'vendor', 'vendor.js'
+    ),
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      mangle: { screw_ie8: true },
+      compress: { screw_ie8: true },
+      comments: false
+    })
+  ];
+} else {
+  const dashboard = new Dashboard();
+  plugins = [
+    new DashboardPlugin(dashboard.setData),
+    new webpack.DefinePlugin({ ENVIRONMENT: JSON.stringify('development') }),
+    new LivereloadPlugin({ appendScriptTag: true }),
+    new webpack.optimize.CommonsChunkPlugin(
+      'vendor', 'vendor.js'
+    )
+  ];
+}
 
 export default {
   entry: {
@@ -95,7 +100,6 @@ export default {
     extensions: ['', '.js', '.json']
   },
 
-  plugins: isProduction ? prodPlugins : devPlugins,
-
+  plugins: plugins,
   devtool: isProduction ? '' : 'eval'
 };
