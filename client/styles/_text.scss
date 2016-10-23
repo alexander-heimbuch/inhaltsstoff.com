@@ -41,6 +41,10 @@ a {
   }
 }
 
+blockquote, blockquote p {
+	color: $color-text;
+}
+
 // Headlines
 @mixin headline {
   font-weight: 700;
