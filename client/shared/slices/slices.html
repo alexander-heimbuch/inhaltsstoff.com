@@ -5,8 +5,8 @@
 
             <div class="category-list" [categories]="article.categories"></div>
             <div class="meta">
-                <span class="author">{{ article.author }}</span> am
-                <span class="time">{{ article.publish | amDateFormat:'DD.MM.YYYY' }}</span>
+                <span class="author">{{ article.author }}</span>
+                <span class="time">am {{ article.publish | amDateFormat:'DD.MM.YYYY' }}</span>
             </div>
         </div>
     </div>
