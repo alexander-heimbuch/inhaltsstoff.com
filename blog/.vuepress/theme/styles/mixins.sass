@@ -1,0 +1,33 @@
+@import 'variables'
+
+@mixin mobile
+  @media only screen and (max-width: #{map_get($breakpoints, 'desktop') - 1px})
+    @content
+
+@mixin desktop
+  @media only screen and (min-width: map_get($breakpoints, 'desktop'))
+    @content
+
+@mixin widescreen
+  @media only screen and (min-width: map_get($breakpoints, 'widescreen'))
+    @content
+
+@mixin visually-hidden
+  position: absolute
+  overflow: hidden
+  clip: rect(0 0 0 0)
+  height: 1px
+  width: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+
+@mixin flex-center
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap

@@ -1,12 +1,14 @@
-<!--
+---
+title: Brazil
 author: Alexander Heimbuch
 publish: 2011-02-20
-categories: Film, Fiction
-image: statics/brazil/brazil-stage.jpg
--->
-
-Brazil
-======
+category: Film
+tags:
+  - Fiction
+  - Fantasy
+type: post
+image: /stages/brazil.jpg
+---
 
 ### Britischer Humor auf Steroiden
 
@@ -16,19 +18,19 @@ Brazil ist das Werk von [Terry Gilliam](http://de.wikipedia.org/wiki/Terry_Gilli
 
 Die Thematik ist nicht neu, bereits Orwell beschrieb 1949 in "1984" die fiktive, alles kontrollierende, totalitäre Gesellschaft. Ausgelöst durch die technische Entwicklung und deren Unfehlbarkeit wird dem System als Perfekt angesehen. Der Wahn die neuen Möglichkeiten kontrollieren zu wollen führt zur Bürokratisierung der Gesellschaft. Ausgelöst durch einen "Bug" im System wird versehentlich der falsche Mitbürger "systemkonformiert" (blöder weise dabei auch getötet). Verhindern kann das leider niemand da sowohl Beamten als auch Bürger mit der damit verbundenen Technik überfordert sind. Die Ohnmächtigkeit und Willkür drückt sich in alltäglichen Terroranschlägen aus. Irgendwie haben die Menschen die Kontrolle über ihr Leben und ihre Informationen an das System verloren. Interessante Überschneidungen zu den aktuellen Versuchen der Regierungen "das Internet" zu kontrollieren...
 
-![Brazil System](statics/brazil/brazil-system.png)
+![Brazil System](~@assets/brazil/brazil-system.png)
 
 ### Mehr Schein als Sein
 
 Was direkt bei "Brazil" auffällt ist die permanente mediale Berieselung. Die Oberklasse will nicht die Armut der Unterklasse sehen. Stattdessen beschäftigt sich die High Society mit Schönheitsoperationen und der Illusion dem ewigen Leben einen Schritt nähr zu kommen. Die Vertuschung geht von dem Müll auf der Straße bis zu dem Meilenweiten Werbeplakate am Highway. Die Reichen leben in Saus und Braus, den Armen wird einfach so ein Loch in die Decke gesägt. Komisch wie sich diese Fiktionen gleichen.
 
-![Schön sein um jeden Preis](statics/brazil/brazil-schoenheit.jpg)
+![Schön sein um jeden Preis](~@assets/brazil/brazil-schoenheit.jpg)
 
 ### Sam Lowry
 
 Der Beamte, der nicht Befördert werden will, ist die Zentrale Person von "Brazil". Er hat sich mit seiner Rolle in der Maschine abgefunden, trotzdem träumt er Nachts von halbnackten Frauen und grünen Wiesen. Erst als letztes Glied der Kette wird er in den fehlerhaften Fall "Buttle" reingezogen. Beim Versuch eine falsch berechneten Betrag rückzuerstatten, leider konnte er es der nicht der Zentralbank anhängen, kommt er in den Kontakt mit der Unterschicht. Der Versuch sich seine Träume in dieser Gesellschaft zu erfüllen enden mit einem Hirnschaden. Ähnlich geht es dem Zuschauer, der Film hat Potential auch bei diesem Schäden zu hinterlassen.
 
-![Sams Traum](statics/brazil/brazil-sam.jpg)
+![Sams Traum](~@assets/brazil/brazil-sam.jpg)
 
 ### Fazit
 

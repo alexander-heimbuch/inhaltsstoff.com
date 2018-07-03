@@ -1,0 +1,92 @@
+@import 'mixins'
+@import 'variables'
+
+.sidebar
+  transition: width $duration ease-in-out $duration, min-width $duration ease-in-out $duration, height $duration ease-in-out $duration
+  transition-delay: $duration
+
+@include desktop
+  .sidebar-enter-active
+    transition: transform $duration linear, opacity $duration linear, left $duration linear
+
+    &.sidebar-enter
+      &.site-headline
+        opacity: 0
+
+      &.navigation-list
+        left: -100%
+        opacity: 0
+
+    &.sidebar-enter-to
+      &.site-headline
+        transition-delay: $duration * 2
+        opacity: 1
+
+      &.navigation-list
+        left: 0
+        opacity: 1
+        transition-delay: $duration * 4
+
+  .sidebar-leave-active
+    transition: transform $duration linear, opacity $duration linear, left $duration linear
+
+    &.sidebar-leave
+      &.site-headline
+        transition-delay: 0
+        opacity: 1
+
+      &.navigation-list
+        transition-delay: 0
+        left: 0
+        opacity: 1
+
+    &.sidebar-leave-to
+      &.site-headline
+        opacity: 0
+
+      &.navigation-list
+        left: -100%
+        opacity: 0
+
+@include mobile
+  .sidebar-enter-active
+    transition: transform $duration linear, opacity $duration linear, left $duration linear
+
+    &.sidebar-enter
+      &.site-headline
+        opacity: 0
+
+      &.navigation-list
+        transform: translate3d(100%, 0, 0)
+        opacity: 0
+
+    &.sidebar-enter-to
+      &.site-headline
+        transition-delay: $duration * 2
+        opacity: 1
+
+      &.navigation-list
+        transform: translate3d(0, 0, 0)
+        opacity: 1
+        transition-delay: $duration * 4
+
+  .sidebar-leave-active
+    transition: transform $duration linear, opacity $duration linear, left $duration linear
+
+    &.sidebar-leave
+      &.site-headline
+        transition-delay: 0
+        opacity: 1
+
+      &.navigation-list
+        transition-delay: 0
+        transform: translate3d(0, 0, 0)
+        opacity: 1
+
+    &.sidebar-leave-to
+      &.site-headline
+        opacity: 0
+
+      &.navigation-list
+        transform: translate3d(100%, 0, 0)
+        opacity: 0

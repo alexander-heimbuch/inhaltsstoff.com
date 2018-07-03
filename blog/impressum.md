@@ -1,10 +1,7 @@
-<!--
-publish: 2011-06-24
-template: page
--->
-
-Impressum
-=========
+---
+type: page
+title: Impressum
+---
 
 ### Angaben gemäß § 5 TMG
 

@@ -1,0 +1,68 @@
+//
+// Texts
+@import 'variables'
+@import 'fonts'
+
+// Font
+@mixin headline-font
+  font-family: 'kontrapunkt', serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+@mixin text-font
+  font-family: 'Raleway', sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+// Attributes
+html, body
+  color: $color-text
+  font-weight: 400
+  line-height: 1.4em
+  @include text-font
+
+h1, h2, h3, h4, h5, h6
+  font-size: 1em
+  font-weight: 400
+  margin: 0 0 $margin 0
+
+p, ul, cite
+  display: block
+  margin: 0 0 $margin 0
+  hyphens: auto
+  font-size: 1.05em;
+
+a
+  text-decoration: none
+  color: $color-text
+  border-bottom: 1px solid $color-text
+
+  &:hover
+    text-decoration: none
+
+
+// Headlines
+@mixin headline
+  font-weight: 700
+  margin-bottom: $margin
+  line-height: 1.4em
+
+h3, h4, h5, h6
+  @include headline-font
+  @include headline
+  font-size: 1.2em
+
+h2
+  @include headline-font
+  @include headline
+  font-size: 1.6em
+
+h1
+  @include headline-font
+  @include headline
+  font-size: 2em
+  text-transform: uppercase
+
+// Alignment
+.text-centered
+  text-align: center
