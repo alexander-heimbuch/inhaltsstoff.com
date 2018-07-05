@@ -46,8 +46,8 @@ export default {
     const items = Object.keys(state.index)
         .map(item => state.index[item])
         .filter(({ type }) => type === 'post')
-        .filter(({ tags, category }) => tags.every(tag => ~[...tags, category].map(toLower).indexOf(tag)))
+        .filter(post => tags.every(tag => ~[...post.tags, post.category].map(toLower).indexOf(tag)))
 
-    return orderBy(items, ['publish'], ['asc'])
+    return orderBy(items, ['publish'], ['desc'])
   }
 }

@@ -39,8 +39,9 @@ export default {
 
   @include desktop
     .card
-      min-width: $card-min-width
       height: 100vh
+      min-width: $card-min-width
+      max-width: $card-max-width
 
       .preview
         position: relative

@@ -43,6 +43,8 @@ export default {
 @import '../styles/text'
 
 .content
+  max-width: $content-max-width
+
   h2, h3, h4
     @include headline-font
     @include headline

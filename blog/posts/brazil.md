@@ -5,7 +5,6 @@ publish: 2011-02-20
 category: Film
 tags:
   - Fiction
-  - Fantasy
 type: post
 image: /stages/brazil.jpg
 ---

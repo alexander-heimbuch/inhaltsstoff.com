@@ -1,5 +1,5 @@
 <template>
-  <div class="tags">
+  <div class="cards">
     <card v-for="item in items" :data="item" :style="{ width: `${100 / items.length}%` }"></card>
   </div>
 </template>
@@ -20,3 +20,8 @@ export default {
   }
 }
 </script>
+
+<style lang="sass" scoped>
+  .cards
+    display: flex
+</style>

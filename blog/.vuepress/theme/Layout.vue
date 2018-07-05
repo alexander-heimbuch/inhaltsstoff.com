@@ -2,20 +2,14 @@
   <div class="layout">
     <preloader></preloader>
     <sidebar></sidebar>
-    <mutate @mutation="loadImages">
-      <main>
-        <component :is="layout"></component>
-      </main>
-    </mutate>
+    <main>
+      <component :is="layout"></component>
+    </main>
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import Mutate from 'vue-observable/src/MutationObserver'
-
-import loadImages from './utils/image-defer'
-
 import Home from './layouts/Home'
 import Tags from './layouts/Tags'
 import Post from './layouts/Post'
@@ -24,12 +18,9 @@ import Sidebar from './Sidebar'
 import Preloader from './partials/Preloader'
 
 export default {
-  components: { Home, Post, Page, Sidebar, Tags, Preloader, Mutate },
+  components: { Home, Post, Page, Sidebar, Tags, Preloader },
   computed: mapGetters(['layout']),
-  methods: {
-    ...mapActions(['updateSite', 'updatePage']),
-    loadImages
-  },
+  methods: mapActions(['updateSite', 'updatePage']),
   watch: {
     $page() {
       this.updatePage(this.$page)

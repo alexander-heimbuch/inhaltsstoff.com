@@ -3928,10 +3928,6 @@ markdown-it-emoji@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/markdown-it-emoji/-/markdown-it-emoji-1.4.0.tgz#9bee0e9a990a963ba96df6980c4fddb05dfb4dcc"
 
-markdown-it-image-defer@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/markdown-it-image-defer/-/markdown-it-image-defer-0.0.1.tgz#57a5051160c2220299e40b060369eeec45875518"
-
 markdown-it-table-of-contents@^0.3.3:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/markdown-it-table-of-contents/-/markdown-it-table-of-contents-0.3.6.tgz#2a733c52485cd47769365402681987ed7d9e64a9"

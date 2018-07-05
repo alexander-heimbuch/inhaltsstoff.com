@@ -19,9 +19,6 @@ module.exports = {
     anchor: {
       permalink: false,
       permalinkBefore: false
-    },
-    config: md => {
-      md.use(require('markdown-it-image-defer'))
     }
   }
 }
