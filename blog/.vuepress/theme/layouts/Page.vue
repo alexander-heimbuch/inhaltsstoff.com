@@ -1,11 +1,11 @@
 <template>
   <article class="container single-page">
-    <div class="page-intro row">
+    <div class="page-intro row" v-loading="navigation.open">
       <div class="columns intro-bar">
         <h2 class="headline-medium intro-headline headline-large">{{ current.title }}</h2>
       </div>
     </div>
-    <div class="row page-content">
+    <div class="row page-content" v-loading="navigation.open">
       <div class="columns content"><Content /></div>
     </div>
   </article>
@@ -15,7 +15,7 @@
   import { mapGetters } from 'vuex'
 
   export default {
-    computed: mapGetters([ 'current' ])
+    computed: mapGetters([ 'current', 'navigation' ])
   }
 </script>
 
@@ -32,7 +32,6 @@
   ul, ol
     margin-left: $margin * 2
     font-size: 1em
-
 
   img
     width: 100%

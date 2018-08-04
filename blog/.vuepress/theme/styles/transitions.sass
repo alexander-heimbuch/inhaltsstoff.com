@@ -1,6 +1,29 @@
 @import 'mixins'
 @import 'variables'
 
+@keyframes flickerAnimation
+  0%
+    opacity: 1
+  50%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes flickerAnimationInitial
+  0%
+    opacity: 0
+  50%
+    opacity: 0.5
+  100%
+    opacity: 1
+
+.loading
+  animation: flickerAnimation $duration * 6
+
+.initial
+  opacity: 0
+  animation: flickerAnimationInitial $duration * 6
+
 .sidebar
   transition: width $duration ease-in-out $duration, min-width $duration ease-in-out $duration, height $duration ease-in-out $duration
   transition-delay: $duration

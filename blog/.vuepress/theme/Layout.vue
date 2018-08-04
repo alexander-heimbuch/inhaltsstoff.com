@@ -19,8 +19,8 @@ import Preloader from './partials/Preloader'
 
 export default {
   components: { Home, Post, Page, Sidebar, Tags, Preloader },
-  computed: mapGetters(['layout']),
-  methods: mapActions(['updateSite', 'updatePage']),
+  computed: mapGetters([ 'layout' ]),
+  methods: mapActions([ 'updateSite', 'updatePage' ]),
   watch: {
     $page() {
       this.updatePage(this.$page)
@@ -69,4 +69,5 @@ export default {
         position: relative
         display: flex
         justify-content: center
+        
 </style>

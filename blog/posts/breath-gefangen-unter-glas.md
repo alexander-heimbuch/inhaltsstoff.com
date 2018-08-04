@@ -1,12 +1,13 @@
-<!--
+---
+title: BREATH Gefangen unter Glas
 author: Marlis Heimbuch
 publish: 2013-03-04
-categories: Buch, Drama
-image: statics/breath/stage.jpg
--->
-
-BREATH Gefangen unter Glas von Sarah Crossan
-============================================
+type: post
+category: Buch
+tags:
+    - Drama
+image: /stages/breath.jpg
+---
 
 __Bäume sind nicht länger notwendig für unser Überleben und unseren Fortschritt__
 

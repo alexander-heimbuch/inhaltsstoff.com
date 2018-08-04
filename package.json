@@ -8,11 +8,14 @@
   "devDependencies": {
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.3",
+    "subfont": "^3.4.0",
     "vuepress": "^0.10.1"
   },
   "scripts": {
     "dev": "vuepress dev blog",
-    "build": "vuepress build blog"
+    "clean": "rm -rf dist",
+    "subfont": "subfont --recursive --in-place --inline-fonts --inline-css dist",
+    "build": "npm run clean && vuepress build --dest dist blog && npm run subfont"
   },
   "dependencies": {
     "foundation-sites": "^6.5.0-rc.1",

@@ -46,7 +46,7 @@ export default {
       .preview
         position: relative
         height: 100%
-        background-size: auto 130%
+        background-size: auto 100%
         background-position: center center
 
       .preview-bar
@@ -56,7 +56,7 @@ export default {
         width: 100%
 
       .preview-headline
-          height: 1.4em * 3
+        height: 1.4em * 3
 
   @include mobile
     .card

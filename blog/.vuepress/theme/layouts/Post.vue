@@ -2,20 +2,20 @@
   <article class="container single-article">
     <div v-if="current.image" class="background-image" :style="{'background-image': `url('${$withBase(current.image)}')`}"></div>
 
-    <div class="article-intro row">
+    <div class="article-intro row" v-loading="navigation.open">
       <div class="columns intro-bar" :class="current.classes">
         <h1 class="intro-headline">{{ current.title }}</h1>
         <div class="meta">
           <span class="author">{{ current.author }}</span>
           <span class="time" v-if="current.publish">&nbsp;am {{ current.publish | moment('DD.MM.YYYY') }}</span>
           <span class="tags">
-            in <tag v-for="(tag, index) in tags" :tag="tag" :last="index >= tags.length - 1"></tag>
+            in <tag v-for="(tag, index) in tags" :tag="tag" :key="index" :last="index >= tags.length - 1"></tag>
           </span>
         </div>
       </div>
     </div>
     <div v-if="current.image" class="article-image" :style="{'background-image': `url('${$withBase(current.image)}')`}"></div>
-    <div class="row article-content">
+    <div class="row article-content" v-loading="navigation.open">
       <div class="columns content"><Content /></div>
     </div>
   </article>
@@ -28,7 +28,7 @@ import Tag from '../partials/Tag'
 
 export default {
   computed: {
-    ...mapGetters([ 'current' ]),
+    ...mapGetters([ 'current', 'navigation' ]),
     tags() {
       return [this.current.category, ...this.current.tags]
     }

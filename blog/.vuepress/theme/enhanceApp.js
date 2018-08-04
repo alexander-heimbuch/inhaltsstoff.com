@@ -4,6 +4,7 @@ import { sync } from 'vuex-router-sync'
 
 import createStore from './store'
 import types from './store/types'
+import registerDirectives from './directives'
 
 import Layout from './Layout'
 
@@ -14,6 +15,7 @@ export default ({
 }) => {
   Vue.use(Vuex)
   Vue.use(moment)
+  registerDirectives(Vue)
 
   const store = createStore()
   sync(store, router)
