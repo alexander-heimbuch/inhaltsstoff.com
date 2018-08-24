@@ -1,25 +1,15 @@
 <template>
-  <div class="cards" v-loading="navigation.open">
-    <card v-for="(item, index) in items" :data="item" :key="index" :style="{ width: `${100 / items.length}%` }"></card>
-  </div>
+  <card-list :tags="tags"></card-list>
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex'
-import Card from '../partials/Card'
+import { mapGetters } from 'vuex'
+import CardList from '../partials/CardList'
 
 export default {
-  components: { Card },
+  components: { CardList },
   computed: {
-    ...mapGetters(['tags', 'posts', 'navigation']),
-    items() {
-      return this.posts(this.tags)
-    }
+    ...mapGetters(['tags'])
   }
 }
 </script>
-
-<style lang="sass" scoped>
-  .cards
-    display: flex
-</style>

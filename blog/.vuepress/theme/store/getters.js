@@ -8,6 +8,7 @@ export default {
   current: getOr({}, 'current'),
   index: getOr({}, 'index'),
   loading: getOr(false, 'loading'),
+  viewport: getOr('desktop', 'viewport'),
 
   navigation: state => ({
     open: get(state, 'navigation.open', false),

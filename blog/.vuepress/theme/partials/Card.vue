@@ -7,7 +7,7 @@
         </h2>
 
         <div class="category-list">
-          in <tag v-for="(tag, index) in tags" :tag="tag" :last="index >= tags.length - 1"></tag>
+          in <tag v-for="(tag, index) in tags" :tag="tag" :last="index >= tags.length - 1" :key="index"></tag>
         </div>
 
         <div class="meta">

@@ -1,11 +1,11 @@
 <template>
   <article class="container single-page">
-    <div class="page-intro row" v-loading="navigation.open">
+    <div class="page-intro row" v-animate-loading="navigation.open">
       <div class="columns intro-bar">
         <h2 class="headline-medium intro-headline headline-large">{{ current.title }}</h2>
       </div>
     </div>
-    <div class="row page-content" v-loading="navigation.open">
+    <div class="row page-content" v-animate-loading="navigation.open">
       <div class="columns content"><Content /></div>
     </div>
   </article>

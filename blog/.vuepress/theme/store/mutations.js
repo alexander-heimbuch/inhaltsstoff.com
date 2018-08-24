@@ -26,5 +26,9 @@ export default {
 
   [types.LOAD_END]: state => {
     state.loading = false
+  },
+
+  [types.SET_VIEWPORT]: (state, viewport) => {
+    state.viewport = viewport
   }
 }

@@ -7,8 +7,13 @@ export default Vue => {
     }, 1200)
   }
 
-  Vue.directive('loading', {
+  Vue.directive('animate-loading', {
     bind: toggleLoading('initial'),
     update: toggleLoading('loading')
+  })
+
+  Vue.directive('animate-navigate', {
+    bind: toggleLoading('initial'),
+    update: toggleLoading('initial')
   })
 }

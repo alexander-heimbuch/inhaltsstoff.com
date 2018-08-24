@@ -13,5 +13,6 @@ export default {
   index: [],
   route: {},
   tags: [],
-  loading: true
+  loading: true,
+  viewport: 'desktop'
 }
