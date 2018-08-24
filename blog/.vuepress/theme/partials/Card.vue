@@ -58,6 +58,15 @@ export default {
       .preview-headline
         height: 1.4em * 3
 
+      .category-list
+        height: 1.4em
+
+      .meta
+        height: 1.4em * 2
+
+      .author
+        display: block
+
   @include mobile
     .card
       width: 100% !important
@@ -77,5 +86,4 @@ export default {
 
       .preview-headline
         height: 1.4em * 3
-
 </style>

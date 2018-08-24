@@ -1,13 +1,3 @@
----
-author: Alexander Heimbuch
-title: Ghost in the Shell
-publish: 2012-02-15
-category: Film
-tags:
- - Scifi
-image: /stages/gits.jpg
-type: post
----
 
 ## Vorwort
 
