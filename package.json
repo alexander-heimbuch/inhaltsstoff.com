@@ -1,7 +1,6 @@
 {
   "name": "inhaltsstoff.com",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "git@github.com:alexander-heimbuch/inhaltsstoff.com.git",
   "author": "Alexander Heimbuch <github@heimbu.ch>",
   "license": "MIT",
@@ -15,7 +14,8 @@
     "dev": "vuepress dev blog",
     "clean": "rm -rf dist",
     "subfont": "subfont --recursive --in-place --inline-fonts --inline-css dist",
-    "build": "npm run clean && vuepress build --dest dist blog && npm run subfont"
+    "build": "npm run clean && vuepress build --dest dist blog && npm run subfont",
+    "deploy:pages": "GH_NAME='Alexander Heimbuch' GH_EMAIL='github@heimbu.ch' scripts/gh-deploy.sh dist"
   },
   "dependencies": {
     "foundation-sites": "^6.5.0-rc.1",

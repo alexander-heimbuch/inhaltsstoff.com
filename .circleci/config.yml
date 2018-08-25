@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  deploy:
+    docker:
+      - image: node:10
+    steps:
+      - checkout
+      - run: yarn
+      - run: yarn build
+      - run: yarn deploy:pages
+
+workflows:
+  version: 2
+  deploy:
+    jobs:
+      - deploy

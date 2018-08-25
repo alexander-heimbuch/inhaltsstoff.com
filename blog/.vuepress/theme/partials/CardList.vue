@@ -58,6 +58,7 @@ export default {
 
 <style lang="sass" scoped>
   @import '../styles/variables'
+  @import '../styles/mixins'
 
   .card-list
     position: relative
@@ -97,5 +98,9 @@ export default {
 
   .icon-previous
     transform: rotate(180deg)
+
+  @include mobile
+    .navigation
+      display: none
 
 </style>

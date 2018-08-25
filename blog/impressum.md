@@ -5,13 +5,13 @@ title: Impressum
 
 ### Angaben gemäß § 5 TMG
 
-Alexander Heimbuch  
-Brühl 10C  
-99423 Weimar
+Alexander Heimbuch
+
+Postfach 10 O1 19  
+07701 Jena
 
 ### Kontakt
 
-Telefon: +4936434314992  
 Mail: admin@inhaltsstoff.com
 
 ### Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
