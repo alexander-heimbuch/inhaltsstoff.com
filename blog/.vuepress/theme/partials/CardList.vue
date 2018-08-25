@@ -103,4 +103,7 @@ export default {
     .navigation
       display: none
 
+    .cards
+      flex-direction: column
+
 </style>
