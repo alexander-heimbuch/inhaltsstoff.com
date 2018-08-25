@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run: yarn
       - run: yarn build
-      - run: yarn deploy:pages
+      - run: ./scripts/gh-deploy.sh dist
 
 workflows:
   version: 2
