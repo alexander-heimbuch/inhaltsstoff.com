@@ -7,7 +7,7 @@ title: Impressum
 
 Alexander Heimbuch
 
-Postfach 10 O1 19  
+Postfach 10 01 19  
 07701 Jena
 
 ### Kontakt
